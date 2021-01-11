@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import { Button } from "@chakra-ui/react"
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
+import { NextPage } from 'next'
 import { signIn, signOut, useSession } from 'next-auth/client'
 
-export default function Home() {
+const Index: NextPage = () => {
   const [ session, loading ] = useSession()
 
   return (
@@ -25,3 +26,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Index
